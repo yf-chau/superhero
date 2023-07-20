@@ -13,7 +13,7 @@ function App() {
         <Route path="/heroes" element={<HeroesPage />} />
       </Route>
     </Routes>
-  );
+  );  
 }
 
 export default App;
