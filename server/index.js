@@ -13,6 +13,12 @@ app.get('/api/:id', async (req, res) => {
   res.json(response.data);
 });
 
+app.get('/api/search/:name', async (req, res) => {
+  const { name } = req.params;
+  const response = await axios.get(`https://superheroapi.com/api/10227237697881031/search/${name}`);
+  res.json(response.data);
+});
+
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });

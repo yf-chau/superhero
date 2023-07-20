@@ -20,7 +20,7 @@ export default function SearchWidget() {
     useEffect(() => {
         async function searchAPI(){
             if(searchString !== "") {
-                const response = await fetch(`https://superheroapi.com/api/10227237697881031/search/${searchString}`)
+                const response = await fetch(`http://localhost:3000/api/search/${searchString}`)
                 const data = await response.json()
                 if(data.response === "success") {
                     setHeroData(data.results)
