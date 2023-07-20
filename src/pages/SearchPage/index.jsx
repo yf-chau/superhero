@@ -1,8 +1,8 @@
-function SearchPage () {
+import { SearchWidget } from "../../components"
 
-    async function fetchHeroes () {
-        const response = await fetch('')
-    }
+export default function SearchPage() {
+  return (
+    <SearchWidget/>
+  )
 }
 
-export default SearchPage
