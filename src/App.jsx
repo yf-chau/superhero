@@ -11,12 +11,13 @@ function App() {
         <Route path='/' element={<Header/>}>
           <Route index element={<Pages.HomePage/>}/>
           <Route path="/hero/:id" element={<Pages.HeroPage />} />
-          
+          <Route path="/heroes" element={<Pages.HeroesPage />} />
           <Route path='/search' element={<Pages.SearchPage/>}/>
         </Route>
       </Routes>
     </>
   )
+
 }
 
 export default App

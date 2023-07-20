@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function HeroPage() {
   const { id } = useParams();
@@ -21,7 +21,7 @@ function HeroPage() {
       {hero.image.url && (
         <div>
           <h2>{hero.name}</h2>
-          <img src={hero.image.url} />
+          <img src={hero.image.url} height="400px" />
           <div>Power stats</div>
           <div>
             <div>Combat</div>
@@ -47,6 +47,7 @@ function HeroPage() {
             <div>Strength</div>
             <div>{hero.powerstats.strength}</div>
           </div>
+          <Link to="/">Back to homepage</Link>
         </div>
       )}
     </>
